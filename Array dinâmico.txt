@@ -1,0 +1,27 @@
+
+#### ESTE É O ÚLTIMO ALGORITMO DESENVOLVIDO (10/04/2021):
+
+class Empresa {
+
+    String nome;
+    String cnpj;
+    Funcionario[] funcionarios;
+
+    public void adicionar(Funcionario func) {
+
+        if(this.funcionarios == null) {
+
+            this.funcionarios = new Funcionario[1];
+            this.funcionarios[0] = func;
+            return;
+
+        }
+
+        Funcionario[] funcAux = new Funcionario[funcionarios.length + 1];
+        for(int x = 0; x < funcionarios.length; x ++) {
+            funcAux[x] = funcionarios[x];
+        }
+        funcAux[funcAux.length - 1] = func;
+        funcionarios = funcAux;
+
+    }
